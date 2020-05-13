@@ -6,9 +6,7 @@ public class Email {
 
 	public boolean checkEmail(String email) {
 
-		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\\\.\" + \"[a-zA-Z0-\n" + 
-				"9_+&*-]+)*@\" + \"(?:[a-zA-Z0-9-]+\\\\.)+[a-z\"\n" + 
-				"+ \"A-Z]{2,7}$";
+		String emailRegex = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
 		Pattern pat = Pattern.compile(emailRegex);
 		if (email == null)
 			return false;
